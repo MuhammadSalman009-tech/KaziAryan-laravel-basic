@@ -8,6 +8,10 @@ use Intervention\Image\Facades\Image;
 
 class MultiPicController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware("auth");
+    }
     public function index()
     {
         $MultiPics=MultiPic::all();
